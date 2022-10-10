@@ -26,8 +26,9 @@
       </div>
   <div class="toolbar">
     <div class="toolbar-item" id="buttons">
-      <input  class="edit-buttons" type="file" id="imageFileInput" src="./plus.png">
-      <button class="edit-buttons" id="save" type="button"> <svgg src="./download.svg" /></button>
+      <button class="edit-buttons" onclick="document.getElementById('file-input').click();"type="button"> <img src="./plus.svg" height="20px"/></button>
+      <input id="file-input" type="file" name="name" style="display: none;" />
+      <button class="edit-buttons" id="save" type="button"> <img src="./download.svg" height="20px"/></button>
     </div>
     <div class="toolbar-item">
       <label class="tool-label" for="brightness">Brightness</label>

@@ -1,6 +1,6 @@
 //initialing values
 
-const fileInput = document.querySelector("#imageFileInput");
+const fileInput = document.querySelector("#file-input");
 const canvas = document.querySelector("#canvas");
 const imageArea = document.querySelector("image-area")
 const canvasCtx = canvas.getContext("2d");
@@ -64,6 +64,16 @@ function renderImage() {
   canvasCtx.drawImage(image, 0, 0);
 }
 
+
+function DownloadImage(name){
+    let downloadLink = document.createElement('a');
+    downloadLink.setAttribute('download', name.replace(".png", "_edited.png"));
+    let dataURL = canvas.toDataURL('image/png');
+    let url = dataURL.replace(/^data:image\/png/,'data:application/octet-stream');
+    downloadLink.setAttribute('href', url);
+    downloadLink.click();
+}
+
 brightness.addEventListener("change", () =>
   updateSetting("brightness", brightness.value)
 );
@@ -92,7 +102,7 @@ inversion.addEventListener("change", () =>
   updateSetting("inversion", inversion.value)
 );
 save.addEventListener('click', () => {
-  document.getElementById('canvas').src = img;
+  DownloadImage(fileInput.files[0].name)
 });
 
 fileInput.addEventListener("change", () => {

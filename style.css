@@ -49,13 +49,31 @@ background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, F
   justify-content: space-around;
 }
 
+.edit-buttons > input{
+  background: url('./plus.svg');
+  background-position:center;
+  background-repeat:no-repeat;
+    z-index: 999;
+    line-height: 0;
+    font-size: 50px;
+    position: absolute;
+    top: -2px;
+    left: -700px;
+    opacity: 0;
+    filter: alpha(opacity = 0);
+    -ms-filter: "alpha(opacity=0)";
+    cursor: pointer;
+    _cursor: hand;
+    margin: 0;
+    padding:0;
+}
+
 .edit-buttons {
   border: 1px solid rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(5px);
   height:36px;
   width:36px; cursor:pointer;
   border-radius: 8px;
-  color: black;
 }
 .toolbar-item {
   padding: 10px;
@@ -79,6 +97,7 @@ background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, F
   justify-content: center;
   flex-grow: 1;
   padding: 1px;
+  max-width: 1000px;
   max-height: 90vh;
   height: min-content;
   background: #555555;
