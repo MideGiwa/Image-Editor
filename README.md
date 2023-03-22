@@ -3,7 +3,7 @@
 This project is a web-based image editor that allows users to upload, edit, and download images directly from their web browser. It is built using HTML, CSS, and JavaScript.
 
 ### Features
-*Upload images from local file system
+* Upload images from local file system
 * Crop images
 * Adjust brightness and contrast
 * Apply filters (grayscale, sepia, invert)
